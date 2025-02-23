@@ -21,6 +21,6 @@ func genericLinearSearch[T comparable](slice []T, target T) (Search, error) {
 		}
 	}
 
-	fmt.Printf("%q not found in collection of items %v\n", target, slice)
+	fmt.Printf("%v not found in collection of items %v\n", target, slice)
 	return s, nil
 }
