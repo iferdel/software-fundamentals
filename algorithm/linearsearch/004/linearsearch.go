@@ -17,5 +17,6 @@ func linearSearchString(slice []string, target string) (Search, error) {
 		}
 	}
 
+	fmt.Printf("%q not found in collection of items %v\n", target, slice)
 	return s, nil
 }
