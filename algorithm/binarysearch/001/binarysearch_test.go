@@ -4,24 +4,27 @@ import "testing"
 
 func TestBinarySearch(t *testing.T) {
 	tests := map[string]struct {
-		slice   []string
-		target  string
+		slice   []int
+		target  int
 		want    Search
 		wantErr bool
 	}{
 		"correct search": {
-			slice: []string{
-				"hay",
-				"agua",
-				"walc",
-				"welcome",
-				"hello",
-				"whats",
-				"give it",
+			slice: []int{
+				2,
+				5,
+				8,
+				10,
+				26,
+				32,
+				62,
+				113,
+				151,
+				166,
 			},
-			target: "hello",
+			target: 151,
 			want: Search{
-				idx:   4,
+				idx:   8,
 				found: true,
 			},
 			wantErr: false,
