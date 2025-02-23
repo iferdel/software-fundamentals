@@ -1,10 +1,11 @@
 package linearsearch
 
+//
 // import (
 // 	"testing"
 // )
 //
-// func TestLinearSearch[T comparable](t *testing.T) {
+// func TestGenericLinearSearchString[T comparable](t *testing.T) {
 // 	tests := map[string]struct {
 // 		slice   []T
 // 		target  T
@@ -16,34 +17,6 @@ package linearsearch
 // 				"first word",
 // 				"hello",
 // 				"welcome",
-// 			},
-// 			target: "welcome",
-// 			want: Search{
-// 				idx:   2,
-// 				found: true,
-// 			},
-// 			wantErr: false,
-// 		},
-// 		"correct search int": {
-// 			slice: []T{
-// 				1,
-// 				5,
-// 				9,
-// 			},
-// 			target: 5,
-// 			want: Search{
-// 				idx:   1,
-// 				found: true,
-// 			},
-// 			wantErr: false,
-// 		},
-// 		"correct search mixed": {
-// 			slice: []T{
-// 				1,
-// 				"hello",
-// 				"welcome",
-// 				4.1,
-// 				5,
 // 			},
 // 			target: "welcome",
 // 			want: Search{
