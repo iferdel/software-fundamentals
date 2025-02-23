@@ -1,5 +1,7 @@
 package linearsearch
 
+import "fmt"
+
 type Search struct {
 	idx   int
 	found bool
