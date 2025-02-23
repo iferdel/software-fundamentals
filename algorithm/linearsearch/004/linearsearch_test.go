@@ -41,7 +41,10 @@ func TestLinearSearchString(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			got, err := linearSearchString(tc.slice, tc.target)
 			if (err != nil) != tc.wantErr {
-				t.Errorf("linearSearch(%v, %v): error = %v, wantErr %v", tc.slice, tc.target, err, tc.wantErr)
+				t.Errorf("linearSearchString(%v, %v): error = %v, wantErr %v", tc.slice, tc.target, err, tc.wantErr)
+			}
+			if got != tc.want {
+				t.Errorf("linearSearchString(%v, %v): got %v want %v", tc.slice, tc.target, got, tc.want)
 			}
 		})
 	}
