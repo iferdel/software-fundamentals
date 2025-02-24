@@ -25,6 +25,7 @@ In the process of identifying concepts and applying them, I've had to search for
 
 🔹 Books
   📖 [A Common-Sense Guide to Data Structures and Algorithms](https://www.amazon.com/Common-Sense-Guide-Structures-Algorithms-Second/dp/1680507222/ref=asc_df_1680507222?language=es_US&mcid=acd639c937b538e49356091305b939ac&tag=cltxtgostdd0e-20&linkCode=df0&hvadid=724540232049&hvpos=&hvnetw=g&hvrand=13133807425219453772&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198028&hvtargid=pla-917825050002&psc=1&language=es_US)
+  📖 [Beej's Guide to Network Programming using Internet Sockets](https://beej.us/guide/bgnet/)
 
 🎓 Online Courses & Blogs
   [BootDev Data Structure & Algorithms](https://www.boot.dev/courses/learn-data-structures-and-algorithms-python)
