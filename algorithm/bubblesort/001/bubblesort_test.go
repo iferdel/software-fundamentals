@@ -1,6 +1,9 @@
 package bubblesort
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestBubbleSort(t *testing.T) {
 	tests := map[string]struct {
@@ -22,7 +25,7 @@ func TestBubbleSort(t *testing.T) {
 			if (err != nil) != tc.wantErr {
 				t.Errorf("bubbleSort(%v): error = %v, wantErr %v", tc.slice, err, tc.wantErr)
 			}
-			if got != tc.want {
+			if !reflect.DeepEqual(got, tc.want) {
 				t.Errorf("bubbleSort(%v): got %v, want %v", tc.slice, got, tc.want)
 			}
 		})
