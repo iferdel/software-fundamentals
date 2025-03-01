@@ -15,7 +15,7 @@ func TestBinarySearch(t *testing.T) {
 			target: 11,
 			want: Search{
 				idx:   4,
-				found: false,
+				found: true,
 			},
 			wantErr: false,
 		},
