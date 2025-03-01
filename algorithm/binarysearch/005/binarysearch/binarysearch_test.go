@@ -29,7 +29,7 @@ func TestBinarySearchMatrix(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
-			got, err := binarySearchMatrix(tc.matrix, tc.target)
+			got, err := BinarySearchMatrix(tc.matrix, tc.target)
 			if (err != nil) != tc.wantErr {
 				t.Errorf("binarySearchMatrix(%v, %v): error = %v, wantErr %v", tc.matrix, tc.target, err, tc.wantErr)
 			}

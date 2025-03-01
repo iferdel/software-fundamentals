@@ -5,7 +5,7 @@ type Search struct {
 	found bool
 }
 
-func binarySearchMatrix(matrix [][]int, target int) (Search, error) {
+func BinarySearchMatrix(matrix [][]int, target int) (Search, error) {
 
 	return Search{}, nil
 }
