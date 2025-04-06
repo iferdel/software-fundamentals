@@ -1,11 +1,11 @@
 package binarysearch
 
 type Search struct {
-	idx   int
-	found bool
+	Idx   int
+	Found bool
 }
 
-func binarySearch(slice []int, target int) (Search, error) {
+func BinarySearch(slice []int, target int) (Search, error) {
 
 	s := Search{}
 	lower := 0
@@ -22,8 +22,8 @@ func binarySearch(slice []int, target int) (Search, error) {
 	for lower <= upper {
 		middlepoint := (lower + upper) / 2
 		if slice[middlepoint] == target {
-			s.found = true
-			s.idx = middlepoint
+			s.Found = true
+			s.Idx = middlepoint
 			return s, nil
 		}
 

@@ -1,6 +1,8 @@
 package binarysearch
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestBinarySearch(t *testing.T) {
 	tests := map[string]struct {
@@ -13,8 +15,8 @@ func TestBinarySearch(t *testing.T) {
 			slice:  []int{1, 4, 7, 9, 12, 78, 99},
 			target: 9,
 			want: Search{
-				idx:   3,
-				found: true,
+				Idx:   3,
+				Found: true,
 			},
 			wantErr: false,
 		},
@@ -22,8 +24,8 @@ func TestBinarySearch(t *testing.T) {
 			slice:  []int{1, 4, 7, 9, 12, 78, 99},
 			target: 78,
 			want: Search{
-				idx:   5,
-				found: true,
+				Idx:   5,
+				Found: true,
 			},
 			wantErr: false,
 		},
@@ -31,8 +33,8 @@ func TestBinarySearch(t *testing.T) {
 			slice:  []int{1, 4, 7, 9, 12, 78, 99},
 			target: 1,
 			want: Search{
-				idx:   0,
-				found: true,
+				Idx:   0,
+				Found: true,
 			},
 			wantErr: false,
 		},
@@ -40,8 +42,8 @@ func TestBinarySearch(t *testing.T) {
 			slice:  []int{1, 4, 7, 9, 12, 78, 99},
 			target: 125,
 			want: Search{
-				idx:   0,
-				found: false,
+				Idx:   0,
+				Found: false,
 			},
 			wantErr: false,
 		},
@@ -49,7 +51,7 @@ func TestBinarySearch(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
-			got, err := binarySearch(tc.slice, tc.target)
+			got, err := BinarySearch(tc.slice, tc.target)
 			if (err != nil) != tc.wantErr {
 				t.Errorf("binarySearch(%v, %v): error = %v, wantErr %v", tc.slice, tc.target, err, tc.wantErr)
 			}
