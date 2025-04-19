@@ -11,6 +11,8 @@ func main() {
 	fmt.Println("regular partition")
 	lower, upper := partition([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 3)
 	fmt.Printf("lower and upper bounds are %v, %v, respectively\n", lower, upper)
+	lower, upper = nil, nil
+
 	fmt.Println("----")
 	fmt.Println("binarysearched partition")
 	lower, upper, err := partitionUsingBinarySearch([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 3)
@@ -18,6 +20,13 @@ func main() {
 		fmt.Printf("error in partition with binarysearch: %v", err)
 	}
 	fmt.Printf("lower and upper bounds are %v, %v, respectively\n", lower, upper)
+	lower, upper = nil, nil
+
+	fmt.Println("----")
+	fmt.Println("partition in array/slice without order")
+	lower, upper = partitionUnorder([]int{90, 1, 3, 4, 1, 6, 7, 8, 9, 1}, 3)
+	fmt.Printf("lower and upper bounds are %v, %v, respectively\n", lower, upper)
+	lower, upper = nil, nil
 }
 
 func partition(a []int, p int) (lower, upper []int) {
@@ -50,4 +59,18 @@ func partitionUsingBinarySearch(a []int, p int) (lower, upper []int, err error) 
 
 	return lower, upper, nil
 
+}
+
+func partitionUnorder(a []int, p int) ([]int, []int) {
+	lower := []int{}
+	upper := []int{}
+	for i := 0; i < len(a); i++ {
+		if a[i] < p {
+			lower = append(lower, a[i])
+		}
+		if a[i] > p {
+			upper = append(upper, a[i])
+		}
+	}
+	return lower, upper
 }
