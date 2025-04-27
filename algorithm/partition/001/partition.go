@@ -9,15 +9,15 @@ func partition(array []int, pivot int) ([]int, []int) {
 
 	for i <= j {
 		fmt.Printf("i: %v, j: %v\n", i, j)
-		if array[i] < pivot {
+		if array[i] <= pivot {
 			i += 1
-		} else if array[j] > pivot {
+		} else if array[j] >= pivot {
 			j -= 1
 		} else {
 			array[i], array[j] = array[j], array[i]
 		}
 	}
 
-	return array[:i], array[j:]
+	return array[:i], array[j+1:]
 
 }
