@@ -15,15 +15,15 @@ func TestPartition(t *testing.T) {
 		"correct partition": {
 			array:     []int{5, 1, 2, 8, 11, 1, 2},
 			pivot:     3,
-			wantLeft:  []int{1, 1, 2, 2},
-			wantRight: []int{5, 6, 11},
+			wantLeft:  []int{2, 1, 2, 1},
+			wantRight: []int{11, 8, 5},
 		},
 	}
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
 			left, right := partition(tc.array, tc.pivot)
-			if reflect.DeepEqual(left, tc.wantLeft) || reflect.DeepEqual(right, tc.wantRight) {
+			if !reflect.DeepEqual(left, tc.wantLeft) || !reflect.DeepEqual(right, tc.wantRight) {
 				t.Errorf(
 					"pivot %v -- want left partition %v, got %v - want right partition %v, got %v",
 					tc.pivot, tc.wantLeft, left, tc.wantRight, right,
