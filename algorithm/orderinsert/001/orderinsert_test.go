@@ -21,7 +21,7 @@ func TestOrderInsert(t *testing.T) {
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
 			got := orderInsert(tc.arrayOne, tc.arrayTwo)
-			if reflect.DeepEqual(tc.want, got) {
+			if !reflect.DeepEqual(tc.want, got) {
 				t.Errorf(
 					"want %v, got %v",
 					tc.want, got,
