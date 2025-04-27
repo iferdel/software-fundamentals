@@ -15,6 +15,8 @@ func partition(array []int, pivot int) ([]int, []int) {
 			j -= 1
 		} else {
 			array[i], array[j] = array[j], array[i]
+			i += 1
+			j -= 1
 		}
 	}
 
