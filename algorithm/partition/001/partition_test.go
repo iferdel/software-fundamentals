@@ -1,6 +1,9 @@
 package partition
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestPartition(t *testing.T) {
 	tests := map[string]struct {
@@ -20,9 +23,9 @@ func TestPartition(t *testing.T) {
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
 			left, right := partition(tc.array, tc.pivot)
-			if left != tc.wantLeft || right != tc.wantRight {
+			if reflect.DeepEqual(left, tc.wantLeft) || reflect.DeepEqual(right, tc.wantRight) {
 				t.Errorf(
-					"pivot %s -- want left partition %s, got %s - want right partition %s, got %s",
+					"pivot %v -- want left partition %v, got %v - want right partition %v, got %v",
 					tc.pivot, tc.wantLeft, left, tc.wantRight, right,
 				)
 			}
